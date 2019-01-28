@@ -4,8 +4,7 @@ class ViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-       
+
        //The following 4 lines make a black rect to be drawn by core graphics
        
        // Manual way of dealing with constrains based on proportions relative to the main frame.
@@ -23,3 +22,5 @@ class ViewController: UIViewController
     }
 
 }
+
+
