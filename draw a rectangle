@@ -1,0 +1,25 @@
+import UIKit
+
+class ViewController: UIViewController 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+       
+       //The following 4 lines make a black rect to be drawn by core graphics
+       
+       // Manual way of dealing with constrains based on proportions relative to the main frame.
+       
+        let square = UIView(frame: CGRect(x:self.view.frame.width/2,
+        y: self.view.frame.height/2, width: 100, height: 100))
+        square.backgroundColor = UIColor.black
+        self.view.addSubview(square)
+        
+    }
+
+    override func didReceiveMemoryWarning() 
+        super.didReceiveMemoryWarning()
+       
+    }
+
+}
