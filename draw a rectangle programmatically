@@ -14,6 +14,7 @@ class ViewController: UIViewController
         square.backgroundColor = UIColor.black
         self.view.addSubview(square)
         
+        // Similar way we are capable of programmatically inserting UILabel, UIButton over the main view  
     }
 
     override func didReceiveMemoryWarning() 
