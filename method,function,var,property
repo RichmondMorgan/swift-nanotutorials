@@ -1,0 +1,44 @@
+№6. Difference between methods and functions & var/let and properties.
+
+Simply put, funtion is a method declared as the imternal part of class.\
+
+Method is not a part of a class but declared and can be accessed not only by the means of inheritance.
+
+To exemplify:
+
+import Foundation
+
+enum CarType {
+    case Sedan
+    case Coupe
+    case Hatchback
+}
+
+class Car {
+
+// Below we declared three vars (one of the is non-mutable), these are three properties cause they are parts of "Car" class.
+
+    var colour = "Black"
+    let numberOfSeats : Int = 5
+    var typeOfCar : CarType = .Coupe
+    
+    init() {
+    }
+    
+    convenience init (customerChosenColour : String) {
+        self.init()
+        colour = customerChosenColour
+    }
+    
+  
+  // Below we declared "drive" function inside "Car" class
+  
+   func drive(){
+        print("Car is moving")
+        
+    }
+    
+}
+
+
+
