@@ -1,0 +1,42 @@
+№7. Designated and convenience initialisers.
+
+As soon as we declared a func, it's compulsory to add an initialiser (init). These are for presetting initial values for the 
+parameters, func comes with.
+
+Default initialiser (designated one) is compulsore to be set. However, in most of cases we want our users to input all parameters
+we create a func with.
+
+So, to remove compulsory nature from property values we introduce convenience initialiser.
+
+It's declared as "convenience init" and before should unavoidably go designated one!!!
+
+
+
+import Foundation
+
+class Car {
+    var colour = "Black"
+    let numberOfSeats : Int = 5
+    var typeOfCar : CarType = .Coupe
+    
+    init() {
+    }
+    
+    // In this case, convenience init will be make it possible to fire up the function that doesn't need an obligatory initial
+    values for properties that come within the function. 
+    
+   // "customerChosenColoue parameter" is expected to be input by user.
+    
+    
+    convenience init (customerChosenColour : String) {
+        self.init()
+        colour = customerChosenColour
+    }
+    
+    func drive(){
+        print("Car is moving")
+        
+    }
+    
+    
+}
