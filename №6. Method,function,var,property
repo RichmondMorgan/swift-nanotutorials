@@ -1,10 +1,10 @@
 №6. Difference between methods and functions & var/let and properties.
 
-Simply put, funtion is a method declared as the imternal part of class.\
+// Simply put, method is a function declared as the imternal part of class.
 
-Method is not a part of a class but declared and can be accessed not only by the means of inheritance.
+// Function is not a part of a class but declared and can be accessed not only by the means of inheritance.
 
-To exemplify:
+// To exemplify:
 
 import Foundation
 
@@ -31,7 +31,7 @@ class Car {
     }
     
   
-  // Below we declared "drive" function inside "Car" class
+  // Below we declared "drive" method inside "Car" class
   
    func drive(){
         print("Car is moving")
