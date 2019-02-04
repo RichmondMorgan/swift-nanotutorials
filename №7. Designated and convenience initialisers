@@ -17,7 +17,6 @@ import Foundation
 class Car {
     var colour = "Black"
     let numberOfSeats : Int = 5
-    var typeOfCar : CarType = .Coupe
     
     init() {
     }
