@@ -12,5 +12,19 @@ class Car {
   // notation.
 
 class SelfDrivingCar : Car{
+
+var gpsModuleGeneration = 3
     
+}
+
+// Inheritance works in such a way that if we create sub-class (grand child) from a sub-class (child), 
+
+// not only we inherit properties from the nearest super-class, but as well we have an access to all properties down to 
+the root parent class
+
+// For example, "anotomousCarriage" inherits not only all properties of "SelfDrivingCar" class, but, as well, the ones from
+"Car" class such as "colour" and "bumberOfSeats"
+
+class anotomousCarriage : SelfDrivingCar {
+
 }
