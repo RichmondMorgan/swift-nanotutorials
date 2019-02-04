@@ -1,0 +1,16 @@
+
+№8 Class inheritance in Swift. How to create a sub-class from the super-class.
+
+class Car {
+    var colour = "Black"
+    let numberOfSeats : Int = 5
+    
+  
+  
+  // Below, we created a sub-class "SelfDrivingCar" from super-class "Car" and, inherited all the properties pertaining to it.
+  // After creating a sub-class we don't need to refer to the parent class in any way. Just access the properties via "." 
+  // notation.
+
+class SelfDrivingCar : Car{
+    
+}
