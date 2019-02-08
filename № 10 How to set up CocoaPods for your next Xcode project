@@ -41,7 +41,7 @@ target 'Clima' do
 
   # Pods for Clima (name of Xcode project)
 
-pod 'SwiftJSON'
+pod 'SwiftyJSON'
 pod 'Alamofire'
 pod 'SVProgressHUD'
 
