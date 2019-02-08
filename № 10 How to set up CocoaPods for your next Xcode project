@@ -1,0 +1,68 @@
+
+How to set up CocoaPods for your next Xcode project
+
+// I assume that Terminal is open and is ready for input (prompt sign $ is at the end of the line)
+
+~ sudo gem install cocoapods
+
+// So to trace what will be happening on the back stage of installation process
+
+~ pod setup —verbose
+
+// That’s it, CocoaPods are installed and setup on our system
+
+// Put pods into Xcode project
+
+// I assume that you are inside directory where 
+your Xcode project rests
+
+// So, to initialise CocoaPods
+
+~ pod init
+
+// «Podfile » has been added to your project folder
+
+~ open -a Xcode Podfile
+
+// After that, terminal will pop-up with document editor of «Podfile» for us to add several lines of code to it.
+
+
+// Your «Podfile» should look exactly like mine except for pods you would like to harness!
+
+<-- START
+
+platform :ios, '9.0'
+
+target 'Clima' do
+
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+
+  use_frameworks!
+
+  # Pods for Clima (name of Xcode project)
+
+pod 'SwiftJSON'
+pod 'Alamofire'
+pod 'SVProgressHUD'
+
+end
+
+FINISH -->
+
+
+// Back to Terminal
+
+// Next, we have to figure out our current version of CocoaPods
+
+~ pod --version
+
+// Now, we are ready to install all CocoaPods
+that were specified in our «Podfile»
+
+~  pod install
+
+// Well done!
+
+One more advice. What if some of pods you install previously needs an update? Easy
+
+~ pod update
