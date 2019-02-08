@@ -33,8 +33,8 @@ class SelfDrivingCar : Car{
     override func drive() {
         super.drive()
         
-        if destin
-        print("Car is moving to" + destination!)
+        print("Car is moving to" + destination!)   <-- by placing "!" after var name we swear that the value will be forcing 
+        compiler to unwrap the optional.
     }
 
 }
