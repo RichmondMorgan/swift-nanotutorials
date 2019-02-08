@@ -1,0 +1,82 @@
+№9 Optional binding & nil var force unwrap
+
+// What if we decided not to set initial value for some properties of a function?
+// There are a lot of cases when we woould like the value will be filled by users or autiomatically based on some conditions.
+// In this case we set a value to nil by putting a question mark after var type declaration (we don't know yet whether or not
+the value will be)
+
+
+import Foundation
+
+class SelfDrivingCar : Car{
+
+override func drive() {
+        super.drive()
+
+    var destination : String?                <-- nil value declaration
+   
+}
+
+}
+
+
+// Upon calling a function we will get a compiler effor if the value is not set.
+// There are several ways to handle this case
+
+// 1. Force unwrap (unsafe way because the code will be executed anyway and the app will crush if the value will be nill)
+
+import Foundation
+
+class SelfDrivingCar : Car{
+    var destination : String?
+    
+    override func drive() {
+        super.drive()
+        
+        if destin
+        print("Car is moving to" + destination!)
+    }
+
+}
+
+
+// 2. Wrap the nil value into condition evaluation which is much safer when we stipulate execution based 
+on the condition that the value is !=nil
+
+import Foundation
+
+class SelfDrivingCar : Car {
+    var destination : String?
+    
+      override func drive() {
+        super.drive()
+        
+        if destination != nil {                       <---- != nil condition evaluation
+            print("Car is moving to" + destination!) 
+            
+            }
+            
+           } 
+    }
+    
+    
+// 3. Optional binding (the safest way). In this case we bind the execution to the let property value of which cannot be nil.
+
+import Foundation
+
+class SelfDrivingCar : Car{
+    var destination : String? <---- nil value declaration
+    
+    override func drive() {
+        super.drive()
+        
+        let userSetDestination = "1 Hacker Way" 
+        
+        if let userSetDestination = destination         <---- optional binding
+        
+        { print("Car is moving to" + destination!)
+        
+    }
+}
+
+}
