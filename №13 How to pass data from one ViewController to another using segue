@@ -1,0 +1,51 @@
+How to pass data from one ViewController to another using segue?
+
+// It turns out to be quite easy.
+
+1. First, given we have starting point ViewController, we need to add another one from the object library.
+
+2. After that, we have to create a new .swift file and attach to our newlyCreated ViewController.
+
+We will be working with the simpliest example: "textField" for the 1st view controller and "Label" for the second one.
+
+I assume, you ve done all heavy-lifting and connected our elements to corresponding swift files.
+
+3. There is a special func that has to be overriden to transport the needed data:
+
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        
+        if segue.identifier == "goToSecondScreen" {
+            
+            let destinationVC = segue.destination as! secondViewController
+            
+            destinationVC.textPassedOver = textField.text
+            
+        }
+        
+        Let's go over the "func prepare(for segue: UIStoryboardSegue, sender: Any?)":
+        
+            goToSecondScreen - identifier of the second ViewController;
+            segue.destination - specifies destination ViewController;
+            secondViewController - name of the second ViewController;
+            textPassedOver - name of the var of type String? declared in the second ViewController;
+            textField - name of the text field declared in the first ViewController;
+            
+            
+
+That is the archietcture of the secondViewController: 
+
+import UIKit
+
+class secondViewController: UIViewController {
+    
+    var textPassedOver : String?
+    
+    @IBOutlet weak var label: UILabel!
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        label.text = textPassedOver
